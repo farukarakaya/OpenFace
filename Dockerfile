@@ -17,6 +17,18 @@ COPY ./exe ${OPENFACE_DIR}/exe
 
 COPY ./lib ${OPENFACE_DIR}/lib
 
+ADD https://www.dropbox.com/s/7na5qsjzz8yfoer/cen_patches_0.25_of.dat?dl=1 \
+    ${OPENFACE_DIR}/lib/local/LandmarkDetector/model/patch_experts/cen_patches_0.25_of.dat
+
+ADD https://www.dropbox.com/s/k7bj804cyiu474t/cen_patches_0.35_of.dat?dl=1 \
+    ${OPENFACE_DIR}/lib/local/LandmarkDetector/model/patch_experts/cen_patches_0.35_of.dat
+
+ADD https://www.dropbox.com/s/ixt4vkbmxgab1iu/cen_patches_0.50_of.dat?dl=1 \
+    ${OPENFACE_DIR}/lib/local/LandmarkDetector/model/patch_experts/cen_patches_0.50_of.dat
+
+ADD https://www.dropbox.com/s/2t5t1sdpshzfhpj/cen_patches_1.00_of.dat?dl=1 \
+${OPENFACE_DIR}/lib/local/LandmarkDetector/model/patch_experts/cen_patches_1.00_of.dat
+
 RUN mkdir ${BUILD_DIR}
 
 ADD https://github.com/opencv/opencv/archive/3.4.0.zip ${BUILD_DIR}
